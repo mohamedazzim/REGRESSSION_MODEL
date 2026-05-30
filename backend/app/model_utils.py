@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import joblib
+import sklearn
 
 ROOT = Path(__file__).resolve().parents[2]
 MODEL_CANDIDATES = [
@@ -21,4 +22,6 @@ def resolve_model_path() -> Path:
 
 def load_model():
     path = resolve_model_path()
+    print(f"Loading model from: {path}")
+    print(f"Runtime scikit-learn version: {sklearn.__version__}")
     return joblib.load(path)
