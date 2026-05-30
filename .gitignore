@@ -1,0 +1,19 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Notebook
+.ipynb_checkpoints
+
+# Logs
+*.log
+
+# Models (if you want to keep the exported model in backend, remove this line)
+# Comment out models/ if you want the trained artifact in the repo
+models/
+
+# OS
+Thumbs.db
+desktop.ini
