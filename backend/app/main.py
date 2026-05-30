@@ -5,7 +5,7 @@ from pathlib import Path
 import pandas as pd
 import traceback
 
-from model_utils import load_model
+from .model_utils import load_model
 
 app = FastAPI(title="Laptop Price Prediction API")
 
