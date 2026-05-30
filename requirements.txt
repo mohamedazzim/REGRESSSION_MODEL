@@ -5,7 +5,11 @@ scikit-learn>=1.2.0
 pandas>=1.5.0
 numpy>=1.22.0
 joblib>=1.2.0
-python-multipart>=0.0.6
-xgboost>=1.7.0
-catboost>=1.1
-shap>=0.41.0
+
+# NOTE: heavy ML libraries (xgboost, catboost, shap) were removed to
+# reduce the deployment bundle size for serverless platforms (Vercel).
+# If your trained model depends on those libraries, either:
+#  - Export a scikit-learn compatible pipeline (e.g., RandomForest/GBR) to
+#    `backend/app/models/model.pkl` before deployment, OR
+#  - Host the model on a separate server (Render/Railway/Heroku) with full
+#    dependencies and point the frontend to that API.

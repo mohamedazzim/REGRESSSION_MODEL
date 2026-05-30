@@ -47,3 +47,20 @@ Request JSON body:
 Deployment (Vercel)
 
 This repo contains a `vercel.json` that instructs Vercel to serve the static frontend and route `/api/predict` to the FastAPI backend. Deploy directly from GitHub — ensure the required Python packages are available in `requirements.txt`.
+
+Vercel build note
+------------------
+
+During an attempted Vercel build the deployment failed because the Python dependency bundle exceeded Vercel's ephemeral storage limit (500 MB). To address this there are three options:
+
+1. Use a scikit-learn-only model: Export or retrain a model that depends only on `scikit-learn` (or other lightweight libs). Place the pipeline at `backend/app/models/model.pkl` and the reduced `requirements.txt` will install and deploy successfully.
+
+2. Host the heavy-model backend separately: Run the full-featured API on a service that allows larger bundles (Render, Railway, DigitalOcean, AWS) where `xgboost`, `catboost`, and `shap` can be installed. Keep the frontend on Vercel and point the `/api/predict` endpoint to that hosted API.
+
+3. Use a container-based deployment: Deploy the app using Docker (Vercel's Docker or another container host) where you control the runtime image and have more space for dependencies.
+
+I have removed heavy ML packages (`xgboost`, `catboost`, `shap`) from `requirements.txt` to allow Vercel builds to succeed with a smaller bundle. If you want, I can:
+
+- Attempt to distill or retrain a scikit-learn compatible model from your dataset and export it to `backend/app/models/model.pkl`.
+- Restore the heavy dependencies and change the deployment strategy to a container or external host.
+
