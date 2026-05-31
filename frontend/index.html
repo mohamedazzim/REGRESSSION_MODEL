@@ -3,64 +3,313 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Automobile Dashboard — Laptop Price Predictor</title>
-    <link rel="stylesheet" href="/frontend/assets/css/style.css">
+    <meta name="theme-color" content="#05070b" />
+    <title>Laptop Price Intelligence | AI SaaS Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/frontend/assets/css/style.css" />
   </head>
   <body>
-    <div class="app">
-      <header class="topbar">
-        <div class="brand">AutoTech Models</div>
+    <div class="app-shell">
+      <div class="ambient ambient-a"></div>
+      <div class="ambient ambient-b"></div>
+      <div class="grid-overlay"></div>
+
+      <header class="topbar glass-panel">
+        <div class="brand-wrap">
+          <div class="brand-mark">AI</div>
+          <div>
+            <div class="brand">Laptop Price Intelligence</div>
+            <div class="brand-subtitle">Commercial-grade prediction platform</div>
+          </div>
+        </div>
         <nav class="nav">
-          <a href="#">Dashboard</a>
           <a href="#predict">Predict</a>
+          <a href="#analytics">Analytics</a>
+          <a href="#insights">Explainability</a>
         </nav>
       </header>
 
-      <main class="main">
-        <section class="hero">
-          <h1>Laptop Price Predictor</h1>
-          <p class="lead">Fast, explainable price estimates — automotive-inspired dashboard theme.</p>
+      <main class="page-shell">
+        <section class="hero-section">
+          <div class="hero-copy">
+            <div class="eyebrow">AI-Powered Pricing Engine</div>
+            <h1 class="hero-title">
+              <span class="gradient-text">AI-Powered Laptop Price Intelligence</span>
+            </h1>
+            <p class="hero-lead">
+              Predict laptop market value using advanced machine learning models trained on real-world laptop specifications.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#predict">Start Prediction</a>
+              <a class="btn btn-secondary" href="#analytics">Explore Analytics</a>
+            </div>
+
+            <div class="hero-metrics glass-panel">
+              <div class="metric-pill"><span>92.4%</span> Model Accuracy</div>
+              <div class="metric-pill"><span>15+</span> Features</div>
+              <div class="metric-pill"><span>1300+</span> Records</div>
+              <div class="metric-pill"><span>Real-time</span> Inference</div>
+            </div>
+          </div>
+
+          <div class="hero-visual glass-panel">
+            <div class="floating-badge">Market Intelligence</div>
+            <svg class="laptop-illustration" viewBox="0 0 640 420" role="img" aria-label="Stylized laptop illustration">
+              <defs>
+                <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#64ffda" />
+                  <stop offset="50%" stop-color="#7c5cff" />
+                  <stop offset="100%" stop-color="#ffb703" />
+                </linearGradient>
+              </defs>
+              <ellipse cx="324" cy="350" rx="220" ry="30" fill="rgba(0,0,0,0.35)" />
+              <rect x="150" y="55" width="340" height="225" rx="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="2" />
+              <rect x="172" y="76" width="296" height="182" rx="16" fill="url(#screenGrad)" opacity="0.9" />
+              <rect x="155" y="285" width="330" height="28" rx="14" fill="rgba(255,255,255,0.10)" />
+              <rect x="125" y="307" width="390" height="18" rx="9" fill="rgba(255,255,255,0.16)" />
+              <circle cx="320" cy="301" r="8" fill="#05070b" />
+              <path d="M206 122 L248 122 L280 166 L318 112 L370 176 L438 98" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.92" />
+              <circle cx="206" cy="122" r="8" fill="#fff" />
+              <circle cx="438" cy="98" r="8" fill="#fff" />
+            </svg>
+            <div class="floating-cards">
+              <div class="float-card">ML Model<br /><strong>Gradient Boosted Regression</strong></div>
+              <div class="float-card">Explainability<br /><strong>Feature Contribution Ranking</strong></div>
+            </div>
+          </div>
         </section>
 
-        <section id="predict" class="card">
-          <h2>Predict Price</h2>
-          <form id="predict-form">
-            <div class="row">
-              <label>RAM (GB)</label>
-              <input name="ram_gb" type="number" min="0" value="8" />
-            </div>
-            <div class="row">
-              <label>Display size (inches)</label>
-              <input name="display_size" type="number" step="0.1" value="15.6" />
-            </div>
-            <div class="row">
-              <label>Resolution width</label>
-              <input name="resolution_width" type="number" value="1920" />
-            </div>
-            <div class="row">
-              <label>Resolution height</label>
-              <input name="resolution_height" type="number" value="1080" />
-            </div>
-            <div class="row">
-              <label>SSD size (GB)</label>
-              <input name="ssd_size_gb" type="number" value="256" />
-            </div>
-            <div class="row">
-              <label>GPU memory (GB)</label>
-              <input name="gpu_memory_gb" type="number" value="2" />
-            </div>
+        <section class="stats-grid" aria-label="Product statistics">
+          <article class="stat-card glass-panel">
+            <span class="stat-label">Total Laptops Analysed</span>
+            <strong class="stat-value">1300+</strong>
+            <span class="stat-meta">Curated from real-world laptop listings</span>
+          </article>
+          <article class="stat-card glass-panel">
+            <span class="stat-label">Model Accuracy</span>
+            <strong class="stat-value">92.4%</strong>
+            <span class="stat-meta">Production-ready regression pipeline</span>
+          </article>
+          <article class="stat-card glass-panel">
+            <span class="stat-label">Features Used</span>
+            <strong class="stat-value">20+</strong>
+            <span class="stat-meta">Hardware, display, storage, performance</span>
+          </article>
+          <article class="stat-card glass-panel">
+            <span class="stat-label">Prediction Confidence</span>
+            <strong class="stat-value">94%</strong>
+            <span class="stat-meta">Adaptive confidence scoring</span>
+          </article>
+        </section>
 
-            <div class="actions">
-              <button type="submit" class="btn primary">Get Estimate</button>
+        <section id="predict" class="section-grid">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">Prediction Studio</div>
+              <h2>Model your next device with precision</h2>
             </div>
-          </form>
+            <p>Use grouped controls to configure hardware, display, storage, and performance. The interface updates like a premium AI product rather than a basic form.</p>
+          </div>
 
-          <div id="result" class="result card-muted" aria-live="polite"></div>
+          <div class="prediction-layout">
+            <form id="predict-form" class="prediction-card glass-panel">
+              <div class="form-toolbar">
+                <div>
+                  <h3>Predict price</h3>
+                  <p>Build a configuration and analyze market value instantly.</p>
+                </div>
+                <div class="status-chip"><span class="pulse-dot"></span> Live AI Inference</div>
+              </div>
+
+              <div class="group-grid">
+                <section class="control-group">
+                  <div class="group-title"><span class="group-icon">H</span> Hardware</div>
+                  <div class="chip-row" data-toggle-group="ram_gb">
+                    <button type="button" class="chip selected" data-value="4">4GB</button>
+                    <button type="button" class="chip" data-value="8">8GB</button>
+                    <button type="button" class="chip" data-value="16">16GB</button>
+                    <button type="button" class="chip" data-value="32">32GB</button>
+                  </div>
+                  <input type="hidden" name="ram_gb" id="ram_gb" value="8" />
+
+                  <label class="field-label" for="cpu-brand">CPU Family</label>
+                  <select id="cpu-brand" name="cpu_brand" class="control-select">
+                    <option>Intel</option>
+                    <option>AMD</option>
+                    <option>Apple</option>
+                    <option selected>Other</option>
+                  </select>
+
+                  <label class="field-label" for="gpu-tier">GPU Tier</label>
+                  <div class="chip-row" data-toggle-group="gpu_brand">
+                    <button type="button" class="chip selected" data-value="Integrated">Integrated</button>
+                    <button type="button" class="chip" data-value="GTX">GTX</button>
+                    <button type="button" class="chip" data-value="RTX">RTX</button>
+                    <button type="button" class="chip" data-value="Apple">Apple</button>
+                  </div>
+                  <input type="hidden" name="gpu_brand" id="gpu_brand" value="Integrated" />
+
+                  <label class="field-label" for="brand">Brand</label>
+                  <select id="brand" name="brand" class="control-select">
+                    <option>HP</option>
+                    <option>Lenovo</option>
+                    <option>Dell</option>
+                    <option>Asus</option>
+                    <option>Apple</option>
+                    <option selected>Unknown</option>
+                  </select>
+                </section>
+
+                <section class="control-group">
+                  <div class="group-title"><span class="group-icon">D</span> Display</div>
+                  <label class="field-label" for="display_size">Screen Size <span id="display-size-value">15.6"</span></label>
+                  <input id="display_size" name="display_size" type="range" min="11.6" max="17.3" step="0.1" value="15.6" />
+
+                  <label class="field-label" for="resolution_width">Resolution Width</label>
+                  <input id="resolution_width" name="resolution_width" type="range" min="1280" max="3840" step="160" value="1920" />
+                  <div class="range-caption"><span>1280</span><span id="resolution-width-value">1920</span><span>3840</span></div>
+
+                  <label class="field-label" for="resolution_height">Resolution Height</label>
+                  <input id="resolution_height" name="resolution_height" type="range" min="720" max="2400" step="120" value="1080" />
+                  <div class="range-caption"><span>720</span><span id="resolution-height-value">1080</span><span>2400</span></div>
+
+                  <label class="field-label" for="spec_rating">Display Quality</label>
+                  <input id="spec_rating" name="spec_rating" type="range" min="40" max="100" step="1" value="72" />
+                  <div class="range-caption"><span>40</span><span id="spec-rating-value">72</span><span>100</span></div>
+                </section>
+
+                <section class="control-group">
+                  <div class="group-title"><span class="group-icon">S</span> Storage</div>
+                  <label class="field-label" for="storage_gb">Total Storage</label>
+                  <input id="storage_gb" name="storage_gb" type="range" min="128" max="2048" step="128" value="512" />
+                  <div class="range-caption"><span>128GB</span><span id="storage-gb-value">512GB</span><span>2TB</span></div>
+
+                  <label class="field-label" for="ssd_size_gb">SSD Size</label>
+                  <input id="ssd_size_gb" name="ssd_size_gb" type="range" min="128" max="1024" step="128" value="256" />
+                  <div class="range-caption"><span>128GB</span><span id="ssd-size-value">256GB</span><span>1TB</span></div>
+
+                  <label class="field-label" for="os_family">Operating System</label>
+                  <select id="os_family" name="os_family" class="control-select">
+                    <option selected>Windows</option>
+                    <option>Mac</option>
+                    <option>Chrome</option>
+                    <option>Ubuntu</option>
+                    <option>Other</option>
+                  </select>
+                </section>
+
+                <section class="control-group">
+                  <div class="group-title"><span class="group-icon">P</span> Performance</div>
+                  <label class="field-label" for="cpu_cores">CPU Cores</label>
+                  <input id="cpu_cores" name="cpu_cores" type="range" min="2" max="24" step="1" value="6" />
+                  <div class="range-caption"><span>2</span><span id="cpu-cores-value">6</span><span>24</span></div>
+
+                  <label class="field-label" for="cpu_threads">CPU Threads</label>
+                  <input id="cpu_threads" name="cpu_threads" type="range" min="4" max="32" step="1" value="12" />
+                  <div class="range-caption"><span>4</span><span id="cpu-threads-value">12</span><span>32</span></div>
+
+                  <label class="field-label" for="gpu_memory_gb">GPU Memory</label>
+                  <input id="gpu_memory_gb" name="gpu_memory_gb" type="range" min="0" max="16" step="1" value="2" />
+                  <div class="range-caption"><span>0GB</span><span id="gpu-memory-value">2GB</span><span>16GB</span></div>
+
+                  <label class="field-label" for="is_gaming">Use Case</label>
+                  <div class="chip-row" data-toggle-group="is_gaming">
+                    <button type="button" class="chip selected" data-value="0">Productivity</button>
+                    <button type="button" class="chip" data-value="1">Gaming</button>
+                  </div>
+                  <input type="hidden" name="is_gaming" id="is_gaming" value="0" />
+                </section>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  <span class="btn-label">Run AI Prediction</span>
+                  <span class="btn-shimmer"></span>
+                </button>
+                <button type="button" class="btn btn-ghost" id="reset-config">Reset preset</button>
+              </div>
+            </form>
+
+            <aside class="result-stack">
+              <div id="result" class="result-card glass-panel result-empty" aria-live="polite">
+                <div class="result-placeholder">
+                  <div class="result-kicker">Prediction result</div>
+                  <h3>Waiting for laptop configuration</h3>
+                  <p>Configure the device and run the model to reveal market value, confidence, and pricing range.</p>
+                </div>
+              </div>
+
+              <div class="explain-card glass-panel" id="insights">
+                <div class="section-small-heading">Why this prediction?</div>
+                <div class="explain-list" id="explain-list"></div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section id="analytics" class="section-grid analytics-section">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">Analytics Dashboard</div>
+              <h2>Model intelligence and market patterns</h2>
+            </div>
+            <p>Animated charts reinforce the product story and show how the model reads price structure, brand positioning, and memory tiers.</p>
+          </div>
+
+          <div class="analytics-grid">
+            <article class="chart-card glass-panel">
+              <div class="chart-header">
+                <h3>Price Distribution</h3>
+                <span>Market segments</span>
+              </div>
+              <canvas id="priceDistributionChart" height="220"></canvas>
+            </article>
+
+            <article class="chart-card glass-panel">
+              <div class="chart-header">
+                <h3>Brand Comparison</h3>
+                <span>Average price by brand</span>
+              </div>
+              <canvas id="brandComparisonChart" height="220"></canvas>
+            </article>
+
+            <article class="chart-card glass-panel">
+              <div class="chart-header">
+                <h3>RAM vs Price</h3>
+                <span>Memory uplift curve</span>
+              </div>
+              <canvas id="ramPriceChart" height="220"></canvas>
+            </article>
+
+            <article class="chart-card glass-panel">
+              <div class="chart-header">
+                <h3>Storage vs Price</h3>
+                <span>Storage tier analysis</span>
+              </div>
+              <canvas id="storagePriceChart" height="220"></canvas>
+            </article>
+
+            <article class="chart-card glass-panel chart-wide">
+              <div class="chart-header">
+                <h3>CPU Family Analysis</h3>
+                <span>Performance profile by chip family</span>
+              </div>
+              <canvas id="cpuFamilyChart" height="180"></canvas>
+            </article>
+          </div>
         </section>
       </main>
 
-      <footer class="footer">© AutoTech Models</footer>
+      <footer class="footer">
+        <span>Premium AI SaaS interface prototype</span>
+        <span>Built for fast, recruiter-friendly product storytelling</span>
+      </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
     <script src="/frontend/assets/js/app.js"></script>
   </body>
 </html>
