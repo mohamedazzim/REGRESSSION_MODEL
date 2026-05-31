@@ -143,7 +143,7 @@ function createPriceDistributionChart() {
         },
       ],
     },
-    options: chartOptions({ cutout: "68%" }),
+    options: chartOptions({ cutout: "72%", preserveAspectRatio: true, aspectRatio: 1.15 }),
   });
 }
 
@@ -163,7 +163,7 @@ function createBrandComparisonChart() {
         },
       ],
     },
-    options: chartOptions({ yTitle: "Price (K INR)" }),
+    options: chartOptions({ yTitle: "Price (K INR)", aspectRatio: 1.85 }),
   });
 }
 
@@ -187,7 +187,7 @@ function createRamPriceChart() {
         },
       ],
     },
-    options: chartOptions({ yTitle: "Price (K INR)" }),
+    options: chartOptions({ yTitle: "Price (K INR)", aspectRatio: 1.85 }),
   });
 }
 
@@ -211,7 +211,7 @@ function createStoragePriceChart() {
         },
       ],
     },
-    options: chartOptions({ yTitle: "Price (K INR)" }),
+    options: chartOptions({ yTitle: "Price (K INR)", aspectRatio: 1.85 }),
   });
 }
 
@@ -233,14 +233,15 @@ function createCpuFamilyChart() {
         },
       ],
     },
-    options: chartOptions({ radar: true }),
+    options: chartOptions({ radar: true, aspectRatio: 2.3 }),
   });
 }
 
-function chartOptions({ cutout = null, radar = false, yTitle = null } = {}) {
+function chartOptions({ cutout = null, radar = false, yTitle = null, aspectRatio = 2 } = {}) {
   return {
     responsive: true,
-    maintainAspectRatio: false,
+    maintainAspectRatio: true,
+    aspectRatio,
     animation: {
       duration: 1200,
       easing: "easeOutQuart",
@@ -274,7 +275,7 @@ function chartOptions({ cutout = null, radar = false, yTitle = null } = {}) {
           },
         }
       : {
-          x: { grid: { display: false } },
+          x: { grid: { display: false }, ticks: { maxRotation: 0, minRotation: 0 } },
           y: {
             beginAtZero: true,
             grid: { color: "rgba(255,255,255,0.08)" },
